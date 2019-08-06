@@ -1,0 +1,7 @@
+Program arguments should be in the following format:
+-in "name-of-animation-file" -view "type-of-view" -out "where-output-show-go" -speed "integer-ticks-per-second"
+
+in is the relative file location from the root of the project,
+view is one of: "text", "svg", "visual", "edit",
+out is the relative file location from the root of the project,
+speed is an integer.

@@ -1,7 +1,25 @@
-Program arguments should be in the following format:
--in "name-of-animation-file" -view "type-of-view" -out "where-output-show-go" -speed "integer-ticks-per-second"
+Created in collaboration with Jamie Peterson for CS 3500 Object-Oriented Design
 
-in is the relative file location from the root of the project,
-view is one of: "text", "svg", "visual", "edit",
-out is the relative file location from the root of the project,
-speed is an integer.
+A simple animating interface! Takes a set of commands from a .txt file and can render in a few different ways:
+'text' mode prints the output of each shape's keyframes to the console
+'svg' mode exports the animation to a .svg
+'visual' mode renders the animation in a window using Swing
+'edit' mode renders a simple editing interface, allowing functionality for:
+    - adding and removing shapes
+    - adding and removing keyframes on pre-existing shapes
+    - editing pre-existing keyframes to occur at new times, or have different properties
+    - play, pause, resume, restart, toggle loop
+    - increase or decrease frame rate
+    - quickly scrub through the animation
+    - export to a text or svg file after you're done editing
+
+Supported shapes include rectangles and ellipses.
+Supported properties include color, position, and scale.
+
+Program arguments should be in the following format:
+-in [input-filepath] -view [view-mode] -out [output-filepath] -speed [ticks per second]
+
+-in:    the relative file location from src/cs3500/animator         [REQUIRED]
+-view   one of: "text", "svg", "visual", "edit"                     [REQUIRED]
+-out    the relative file location from the root of the project     [OPTIONAL]
+-speed  an integer representing frames per second to render         [OPTIONAL: default=1]
